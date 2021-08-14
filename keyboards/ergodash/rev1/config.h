@@ -32,9 +32,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 7
 
-// wiring of each half
+// wiring of each half (changed default F6 to C6 because of ripped of solder pad, need to connect F6 (A1) to C6 (5) on pro micro (bit-c))
 #define MATRIX_ROW_PINS { D4, D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2 }
+#define MATRIX_COL_PINS { F4, F5, C6, F7, B1, B3, B2 }
 // #define MATRIX_COL_PINS { B2, B3, B1, F7, F6, F5, F4 } //uncomment this line and comment line above if you need to reverse left-to-right key order
 
 #define DIODE_DIRECTION COL2ROW
@@ -45,7 +45,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
-#define AUDIO_PIN C6
+//disabled to fix broken A1/F6 pin on pro micro -> rerouted to C6
+//#define AUDIO_PIN C6
 
 /* number of backlight levels */
 #ifdef BACKLIGHT_ENABLE
